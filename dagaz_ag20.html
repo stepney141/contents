@@ -47,9 +47,9 @@
     <body>
         <div id="container"></div>
         <script type="text/javascript">
-            var md = window.markdownit().use(markdownitFootnote);
+            axios.get('./index.md')
+                .then(response => document.querySelector('#container').innerHTML = window.markdownit().use(markdownitFootnote));
         </script>
-
     </body>
 
 </html>
